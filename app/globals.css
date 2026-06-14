@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --page-text: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(251, 191, 36, 0.17), transparent 26%),
+    radial-gradient(circle at 86% 12%, rgba(56, 189, 248, 0.14), transparent 24%),
+    radial-gradient(circle at 50% 82%, rgba(148, 163, 184, 0.12), transparent 28%),
+    linear-gradient(180deg, #faf6ee 0%, #f6f0e8 34%, #f1ece5 100%);
+  background-attachment: fixed;
+  color: var(--page-text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+}
+
+::selection {
+  background: rgba(15, 23, 42, 0.9);
+  color: #fff;
+}
+
+.page-mesh {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 85%);
+}
+
+.soft-float {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.soft-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.soft-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.soft-shine::after {
+  content: "";
+  position: absolute;
+  inset: -40% auto -40% -45%;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.soft-shine:hover::after {
+  opacity: 1;
+  animation: shine-sweep 1.15s ease;
+}
+
+.card-lift {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shine-sweep {
+  from {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  to {
+    transform: translateX(340%) skewX(-18deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
