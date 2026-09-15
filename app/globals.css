@@ -195,6 +195,18 @@ html.dark .hover\:text-slate-950:hover {
   color: #f8fafc;
 }
 
+html.dark .certificate-link {
+  background-color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #cbd5e1;
+}
+
+html.dark .certificate-link:hover {
+  background-color: #334155;
+  border-color: #94a3b8;
+  color: #f8fafc;
+}
+
 html.dark .page-mesh {
   background-image:
     linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),

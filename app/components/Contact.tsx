@@ -19,7 +19,7 @@ export default function Contact() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href={`mailto:${personal.email}`}
-                  className="rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-100 soft-shine"
+                  className="rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
                 >
                   Email me
                 </a>

@@ -63,7 +63,7 @@ export default function Education() {
                           href={cert.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-400 hover:text-slate-950"
+                          className="certificate-link rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-400 hover:text-slate-950"
                         >
                           Open certificate
                         </a>

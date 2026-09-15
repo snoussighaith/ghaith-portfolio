@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Ghaith Snoussi, a Data Science Master's student focused on AI, IoT, Big Data, and modern web experiences.",
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
   },
 };
 

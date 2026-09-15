@@ -46,9 +46,7 @@ export default function Navbar() {
         >
           GS<span className="text-amber-500">.</span>
         </span>
-        <span className="text-sm font-medium text-slate-500">
-          Ghaith Snoussi
-        </span>
+       
         <div className="flex items-center gap-3 md:gap-5">
           <div className="hidden rounded-full border border-white/70 bg-white/70 px-4 py-2 shadow-sm backdrop-blur md:block">
             <ul className="flex items-center gap-6">
