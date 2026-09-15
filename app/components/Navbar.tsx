@@ -6,12 +6,25 @@ const links = ["About", "Skills", "Experience", "Projects", "Education", "Contac
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll);
+    const savedTheme = window.localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    setDarkMode(isDark);
+    document.documentElement.classList.toggle("dark", isDark);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = !darkMode;
+    setDarkMode(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme);
+    window.localStorage.setItem("theme", nextTheme ? "dark" : "light");
+  };
 
   const scrollTo = (id: string) => {
     setMenuOpen(false);
@@ -33,7 +46,9 @@ export default function Navbar() {
         >
           GS<span className="text-amber-500">.</span>
         </span>
-
+        <span className="text-sm font-medium text-slate-500">
+          Ghaith Snoussi
+        </span>
         <div className="flex items-center gap-3 md:gap-5">
           <div className="hidden rounded-full border border-white/70 bg-white/70 px-4 py-2 shadow-sm backdrop-blur md:block">
             <ul className="flex items-center gap-6">
@@ -49,6 +64,15 @@ export default function Navbar() {
               ))}
             </ul>
           </div>
+
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-lg text-slate-700 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950"
+          >
+            {darkMode ? "☀" : "☾"}
+          </button>
 
           <a
             href="#contact"

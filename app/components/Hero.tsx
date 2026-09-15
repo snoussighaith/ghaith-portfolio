@@ -78,6 +78,14 @@ export default function Hero() {
               >
                 GitHub
               </a>
+              <a
+                href={personal.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 transition hover:border-slate-300 hover:text-slate-950 card-lift"
+              >
+                ghaithsnoussi.dev
+              </a>
             </div>
           </div>
 
@@ -92,15 +100,8 @@ export default function Hero() {
               className="relative rounded-[2rem] border border-white/70 bg-white/75 object-cover shadow-lg backdrop-blur soft-float"
             />
 
-            <div className="absolute -bottom-6 left-6 rounded-2xl border border-white/70 bg-white/80 px-4 py-3 shadow-[0_18px_40px_rgba(15,23,42,0.12)] backdrop-blur soft-fade-up" style={{ animationDelay: "220ms" }}>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Focus</p>
-              <p className="mt-2 text-sm font-semibold text-slate-900">AI, data systems, clean interfaces</p>
-            </div>
-
-            <div className="absolute -right-2 top-10 rounded-2xl border border-white/70 bg-white/80 px-4 py-3 shadow-[0_18px_40px_rgba(15,23,42,0.12)] backdrop-blur soft-fade-up" style={{ animationDelay: "320ms" }}>
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Open to</p>
-              <p className="mt-2 text-sm font-semibold text-slate-900">Internships, freelance, collaboration</p>
-            </div>
+           
+            
           </div>
         </div>
       </div>

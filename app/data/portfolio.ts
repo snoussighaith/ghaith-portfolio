@@ -2,8 +2,9 @@ import portrait from "../assets/image.png";
 
 export const personal = {
   name: "Ghaith Snoussi",
-  title: "Data Science & Full Stack Developer",
-  subtitle: "Master's student in Data Science · IoT · AI · MERN Stack",
+  title: "Data Science Master's Student | AI & Full Stack Developer",
+  subtitle: "Currently pursuing Master's degree in Data Science at ISIMA Mahdia (2025-2027)",
+  website: "https://ghaithsnoussi.dev",
   email: "ghaithsnoussi2@gmail.com",
   phone: "+216 51 714 728",
   location: "Mahdia, Tunisia",
@@ -17,24 +18,33 @@ export const personal = {
 
 export const skills = [
   {
-    category: "Data & AI",
-    items: ["Machine Learning", "Apache Kafka", "Apache Spark", "Feature Engineering", "Data Visualization", "Real-time Pipelines", "Interactive Dashboards"],
+    category: "ML/Data",
+    items: ["Python", "scikit-learn", "sentence-transformers", "Pandas", "Apache Spark", "Kafka"],
   },
   {
-    category: "Web & Mobile",
-    items: ["MERN Stack", "React", "Node.js", "Next.js", "Flutter", "REST APIs", "Full Stack Development"],
+    category: "Backend",
+    items: ["FastAPI", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "SQLAlchemy"],
   },
   {
-    category: "IoT & Embedded",
-    items: ["IoT Systems", "RFID Technology", "AI-based Surveillance", "Embedded Systems"],
+    category: "Frontend",
+    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Recharts"],
   },
   {
-    category: "Languages & Tools",
-    items: ["Python", "JavaScript", "TypeScript", "C++", "MongoDB", "Figma", "Git"],
+    category: "DevOps",
+    items: ["Docker", "docker-compose", "Git", "Linux"],
   },
 ];
 
 export const experience = [
+  {
+    role: "Master's in Data Science",
+    company: "ISIMA Mahdia",
+    period: "2025 – 2027",
+    location: "Mahdia, Tunisia",
+    description:
+      "Currently pursuing a Master's degree in Data Science, deepening expertise in machine learning, NLP, data engineering, and AI-powered applications.",
+    tags: ["Data Science", "Machine Learning", "NLP", "AI"],
+  },
   {
     role: "Final Year Intern",
     company: "Tunbra",
@@ -47,6 +57,16 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    title: "AI Recrutement Assistant",
+    category: "AI & Full Stack",
+    description:
+      "Full-stack AI recruitment system with CV parsing, NLP matching and analytics dashboard.",
+    highlights: ["71% matching accuracy using cosine similarity embeddings"],
+    tags: ["Python", "FastAPI", "Next.js", "PostgreSQL", "Docker", "sentence-transformers"],
+    github: "https://github.com/snoussighaith/AI-Recrutement-Assistant",
+    color: "from-emerald-500 to-cyan-600",
+  },
   {
     title: "Institutional Website — Climat Énergie Tunisie",
     category: "Freelance",

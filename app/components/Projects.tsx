@@ -32,6 +32,16 @@ export default function Projects() {
                     <h3 className="text-xl font-semibold leading-snug text-slate-950">
                       {project.title}
                     </h3>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex text-xs font-semibold text-emerald-700 transition hover:text-emerald-900"
+                      >
+                        View on GitHub ↗
+                      </a>
+                    )}
                   </div>
                 </div>
 
