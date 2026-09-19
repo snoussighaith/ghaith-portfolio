@@ -77,8 +77,9 @@ export const projects = [
       "40% reduction in page load time",
       "50% increase in organic traffic within 3 months",
     ],
+    github: "https://github.com/snoussighaith/stClimat-Energie",
     tags: ["Web Dev", "SEO", "Responsive Design", "Performance"],
-    color: "from-slate-700 to-slate-900",
+    color: "from-emerald-500 to-cyan-600",
   },
   {
     title: "Credit Risk Analysis — German Credit",
