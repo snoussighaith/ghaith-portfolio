@@ -45,6 +45,42 @@ export default function Hero() {
               </a>
             </div>
 
+            <div className="rounded-3xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/70">
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    Download my CV
+                  </p>
+                  <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                    Choose your preferred language
+                  </p>
+                </div>
+                <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-400/15 dark:text-amber-300">
+                  PDF
+                </span>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <a
+                  href={personal.resumes.english}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-amber-400 dark:text-slate-950 dark:hover:bg-amber-300"
+                >
+                  English CV
+                </a>
+                <a
+                  href={personal.resumes.french}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-700"
+                >
+                  CV français
+                </a>
+              </div>
+            </div>
+
             <div className="grid gap-3 sm:grid-cols-3">
               {[
                 personal.location,

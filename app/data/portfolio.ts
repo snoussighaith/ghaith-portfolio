@@ -10,6 +10,10 @@ export const personal = {
   location: "Mahdia, Tunisia",
   linkedin: "https://linkedin.com/in/ghaith-snoussi",
   github: "https://github.com/ghaith-snoussi",
+  resumes: {
+    english: "/CV_Ghaith_Snoussi_EN.pdf",
+    french: "/CV_Ghaith_Snoussi_FR.pdf",
+  },
   photoSrc: portrait,
   photoAlt: "Portrait of Ghaith Snoussi",
   summary:
