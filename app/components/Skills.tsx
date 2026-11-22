@@ -4,14 +4,12 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 md:py-28 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-14 max-w-2xl soft-fade-up">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Expertise</p>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
-            Skills & Technologies
-          </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            A blend of data, product, and engineering tools used to build interactive systems and visual experiences.
-          </p>
+        <div className="mb-12 grid gap-5 border-b border-slate-200 pb-8 md:grid-cols-[1fr_0.55fr] md:items-end">
+          <div>
+            <p className="section-index">01 / Expertise</p>
+            <h2 className="section-title">Skills & Technologies</h2>
+          </div>
+          <p className="section-description md:text-right">AI, machine learning, NLP, RAG, data engineering, and full-stack development.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

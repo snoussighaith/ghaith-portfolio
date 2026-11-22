@@ -1,144 +1,79 @@
 "use client";
+
 import Image from "next/image";
 import { personal } from "../data/portfolio";
 
 export default function Hero() {
   return (
-    <section id="about" className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.18),transparent_32%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.16),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.6),transparent)]" />
-
+    <section id="about" className="relative scroll-mt-24 overflow-hidden pb-20 pt-32 md:pb-28 md:pt-44">
+      <div className="hero-grid absolute inset-0 -z-10" />
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-8 soft-fade-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/70 bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700 shadow-sm backdrop-blur soft-shine">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Available for opportunities
-            </div>
-
-            <div className="space-y-5">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
-                {personal.title}
-              </p>
-              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 md:text-7xl">
-                {personal.name}
-              </h1>
-              <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                {personal.summary}
-              </p>
-              <p className="max-w-xl text-base leading-7 text-slate-500">
-                {personal.subtitle}
+        <div className="grid items-end gap-12 lg:grid-cols-[1fr_22rem]">
+          <div className="soft-fade-up">
+            <div className="mb-8 flex items-center gap-3">
+              <span className="h-px w-10 bg-emerald-500" />
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-emerald-700">
+                Available for opportunities
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={`mailto:${personal.email}`}
-                className="rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-slate-800 soft-shine"
-              >
-                Get in touch
-              </a>
-              <a
-                href="#projects"
-                className="rounded-full border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-700 backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white"
-              >
-                View projects
-              </a>
-            </div>
+            <p className="mb-5 text-sm font-semibold uppercase leading-6 tracking-[0.16em] text-slate-500">
+              Data Science Master&apos;s Student
+              <br />
+              AI Engineer · Machine Learning · Full-Stack
+            </p>
 
-            <div className="rounded-3xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/70">
-              <div className="mb-4 flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                    Download my CV
-                  </p>
-                  <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                    Choose your preferred language
-                  </p>
-                </div>
-                <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-400/15 dark:text-amber-300">
-                  PDF
-                </span>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <a
-                  href={personal.resumes.english}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-amber-400 dark:text-slate-950 dark:hover:bg-amber-300"
-                >
-                  English CV
-                </a>
-                <a
-                  href={personal.resumes.french}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-700"
-                >
-                  CV français
-                </a>
-              </div>
-            </div>
+            <h1 className="max-w-4xl text-[clamp(3.8rem,9vw,8rem)] font-semibold leading-[0.86] tracking-[-0.075em] text-slate-950">
+              Ghaith
+              <br />
+              <span className="text-slate-400">Snoussi</span>
+            </h1>
 
-            <div className="grid gap-3 sm:grid-cols-3">
-              {[
-                personal.location,
-                "AI, IoT & product thinking",
-                "MERN + data workflows",
-              ].map((item, index) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-white/70 bg-white/75 px-4 py-3 text-sm text-slate-600 shadow-sm backdrop-blur card-lift"
-                  style={{ animationDelay: `${index * 90}ms` }}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
+              Building intelligent systems across <strong className="font-semibold text-slate-950">NLP, RAG, machine learning, and full-stack development</strong>.
+            </p>
 
-            <div className="flex flex-wrap gap-3 text-sm text-slate-500">
-              <a
-                href={personal.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 transition hover:border-slate-300 hover:text-slate-950 card-lift"
-              >
-                LinkedIn
-              </a>
-              <a
-                href={personal.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 transition hover:border-slate-300 hover:text-slate-950 card-lift"
-              >
-                GitHub
-              </a>
-              <a
-                href={personal.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 transition hover:border-slate-300 hover:text-slate-950 card-lift"
-              >
-                ghaithsnoussi.dev
-              </a>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a href="#projects" className="primary-action">Selected projects <span aria-hidden="true">↓</span></a>
+              <a href={`mailto:${personal.email}`} className="secondary-action">Get in touch <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl lg:max-w-none soft-fade-up" style={{ animationDelay: "120ms" }}>
-            <div className="absolute -inset-8 rounded-[2.5rem] bg-gradient-to-br from-amber-300/25 via-transparent to-sky-300/20 blur-3xl soft-float" />
+          <div className="relative soft-fade-up" style={{ animationDelay: "100ms" }}>
+            <div className="portrait-shell">
+              <Image
+                src={personal.photoSrc}
+                alt={personal.photoAlt}
+                width={520}
+                height={520}
+                priority
+                className="h-full w-full object-cover grayscale-[15%]"
+              />
+              <div className="portrait-caption">
+                <span>Mahdia, Tunisia</span>
+                <span>25.81° N</span>
+              </div>
+            </div>
 
-            <Image
-              src={personal.photoSrc}
-              alt={personal.photoAlt}
-              width={500}
-              height={500}
-              className="relative rounded-[2rem] border border-white/70 bg-white/75 object-cover shadow-lg backdrop-blur soft-float"
-            />
-
-           
-            
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <a href={personal.resumes.english} target="_blank" rel="noopener noreferrer" className="compact-link">English CV <span>↗</span></a>
+              <a href={personal.resumes.french} target="_blank" rel="noopener noreferrer" className="compact-link">CV français <span>↗</span></a>
+            </div>
           </div>
+        </div>
+
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-4">
+          {[
+            ["01", "Artificial Intelligence"],
+            ["02", "Natural Language Processing"],
+            ["03", "Retrieval-Augmented Generation"],
+            ["04", "Full-Stack Development"],
+          ].map(([number, label]) => (
+            <div key={number} className="bg-white/85 px-5 py-5">
+              <span className="text-[10px] font-bold tracking-[0.18em] text-slate-400">{number}</span>
+              <p className="mt-2 text-sm font-semibold text-slate-700">{label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

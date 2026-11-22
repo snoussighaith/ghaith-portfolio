@@ -21,10 +21,10 @@ html {
 body {
   font-family: var(--font-body), sans-serif;
   background:
-    radial-gradient(circle at 12% 18%, rgba(251, 191, 36, 0.17), transparent 26%),
-    radial-gradient(circle at 86% 12%, rgba(56, 189, 248, 0.14), transparent 24%),
-    radial-gradient(circle at 50% 82%, rgba(148, 163, 184, 0.12), transparent 28%),
-    linear-gradient(180deg, #faf6ee 0%, #f6f0e8 34%, #f1ece5 100%);
+    linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+    #f7f8f5;
+  background-size: 48px 48px, 48px 48px, auto;
   background-attachment: fixed;
   color: var(--page-text);
   -webkit-font-smoothing: antialiased;
@@ -94,6 +94,283 @@ h6 {
   transform: translateY(-6px);
 }
 
+.section-kicker {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #059669;
+}
+
+.case-heading {
+  max-width: 52rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  color: #0f172a;
+}
+
+.case-card {
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 1.5rem;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+.case-label {
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.case-copy {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #64748b;
+}
+
+.nav-shell {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.nav-scrolled {
+  border-color: rgba(226, 232, 240, 0.82);
+  background: rgba(247, 248, 245, 0.88);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(18px);
+}
+
+.nav-brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.nav-brand span {
+  color: #10b981;
+}
+
+.nav-link {
+  border-radius: 999px;
+  padding: 0.55rem 0.72rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-link:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.icon-button {
+  min-height: 2.35rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #475569;
+  backdrop-filter: blur(12px);
+}
+
+.mobile-menu {
+  margin: 0 1rem 1rem;
+  display: grid;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.5rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.mobile-menu button {
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.mobile-menu button:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.hero-grid {
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
+}
+
+.portrait-shell {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.5rem;
+  background: #e2e8f0;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
+}
+
+.portrait-caption {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.72);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.primary-action,
+.secondary-action {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.primary-action {
+  background: #0f172a;
+  color: white;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-action {
+  border: 1px solid #cbd5e1;
+  background: rgba(255, 255, 255, 0.7);
+  color: #334155;
+}
+
+.compact-link {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #475569;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.compact-link:hover {
+  transform: translateY(-2px);
+  border-color: #94a3b8;
+}
+
+.section-index {
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #059669;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  color: #0f172a;
+}
+
+.section-description {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #64748b;
+}
+
+.project-number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+}
+
+.project-row {
+  transition: background-color 220ms ease, padding 220ms ease;
+}
+
+.project-row:hover {
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.project-tag {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.8);
+  padding: 0.4rem 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #64748b;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.project-row:hover .project-tag {
+  border-color: #cbd5e1;
+  color: #334155;
+  transform: translateY(-1px);
+}
+
+.github-link {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #94a3b8;
+  padding: 0.7rem 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #334155;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.github-link:hover {
+  border-color: var(--project-accent);
+  color: #0f172a;
+}
+
 @keyframes float-slow {
   0%,
   100% {
@@ -141,9 +418,10 @@ h6 {
 
 html.dark body {
   background:
-    radial-gradient(circle at 12% 18%, rgba(16, 185, 129, 0.12), transparent 26%),
-    radial-gradient(circle at 86% 12%, rgba(14, 165, 233, 0.12), transparent 24%),
-    linear-gradient(180deg, #0f172a 0%, #111827 48%, #020617 100%);
+    linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+    #0b1120;
+  background-size: 48px 48px, 48px 48px, auto;
 }
 
 html.dark body.bg-\[\#f5efe6\] {
@@ -213,7 +491,72 @@ html.dark .page-mesh {
     linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
 }
 
+html.dark .case-heading {
+  color: #f8fafc;
+}
+
+html.dark .case-card {
+  border-color: rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.78);
+}
+
+html.dark .case-copy {
+  color: #cbd5e1;
+}
+
 html.dark footer {
   background-color: #020617;
   border-color: rgba(148, 163, 184, 0.2);
+}
+
+html.dark .nav-shell.nav-scrolled {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(11, 17, 32, 0.88);
+}
+
+html.dark .nav-brand,
+html.dark .section-title,
+html.dark .project-row h3,
+html.dark .github-link:hover {
+  color: #f8fafc;
+}
+
+html.dark .icon-button,
+html.dark .secondary-action,
+html.dark .compact-link,
+html.dark .mobile-menu {
+  border-color: rgba(148, 163, 184, 0.24);
+  background: rgba(15, 23, 42, 0.82);
+  color: #cbd5e1;
+}
+
+html.dark .nav-link:hover,
+html.dark .mobile-menu button:hover {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+html.dark .portrait-shell {
+  border-color: rgba(148, 163, 184, 0.22);
+  background: #1e293b;
+}
+
+html.dark .primary-action {
+  background: #f8fafc;
+  color: #0f172a;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+html.dark .project-row:hover {
+  background: rgba(30, 41, 59, 0.38);
+}
+
+html.dark .project-tag {
+  border-color: rgba(148, 163, 184, 0.22);
+  background: rgba(30, 41, 59, 0.62);
+  color: #cbd5e1;
+}
+
+html.dark .divide-slate-200 {
+  border-color: rgba(148, 163, 184, 0.18);
 }

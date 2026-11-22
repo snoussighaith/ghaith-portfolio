@@ -15,9 +15,14 @@ const bodyFont = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Ghaith Snoussi | Data Science Master's Student | AI & Full Stack Developer",
+  title: "Ghaith Snoussi | AI Engineer & Full-Stack Developer",
   description:
-    "Portfolio of Ghaith Snoussi, a Data Science Master's student focused on AI, IoT, Big Data, and modern web experiences.",
+    "Portfolio of Ghaith Snoussi, an AI engineer specializing in Machine Learning, NLP, RAG, Data Science, and full-stack development.",
+  openGraph: {
+    title: "Ghaith Snoussi | AI Engineer & Full-Stack Developer",
+    description: "AI, Machine Learning, NLP, RAG, Data Science, and Full-Stack Development.",
+    type: "website",
+  },
   icons: {
     icon: "/icon.png",
   },
